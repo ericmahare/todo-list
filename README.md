@@ -11,10 +11,6 @@
 - JavaScript
 - webpack
 
-## Live Demo
-
-
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -23,7 +19,9 @@ To get a local copy up and running follow these simple example steps.
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write `git clone https://github.com/ericmahare/todo-list.git`.
-- go to the repository folder in your command prompt `cd awesome-books-modules`
+- go to the repository folder in your command prompt `cd todo-list`
+- write `npm install` to install all the packages.
+- write `npm start` to start the live server
 
 ## Authors
 
