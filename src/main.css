@@ -53,12 +53,22 @@ body {
 }
 
 .input {
-  width: 92%;
   padding: var(--list-pad);
   border: 0;
   outline: 0;
   font-style: italic;
   font-size: 20px;
+  width: 92%;
+}
+
+.single-todo {
+  display: flex;
+  border-bottom: var(--border);
+  padding: 0 15px;
+}
+
+#todo-form {
+  width: 95%;
 }
 
 ::placeholder {
@@ -72,20 +82,30 @@ body {
   height: 1rem;
 }
 
+.upt-form {
+  width: 95%;
+}
+
 .todo-input {
   padding: 0;
   border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 95%;
 }
 
 .todo-value {
-  border-bottom: var(--border);
   border-top: 0;
-  padding: var(--list-pad);
+  display: flex;
+  width: 98%;
+  align-items: center;
 }
 
 .return {
   font-size: 0.8rem;
-  margin-left: 1rem;
 }
 
 .btn {
@@ -96,11 +116,24 @@ body {
 .move {
   cursor: move;
   color: var(--bg-color);
+  align-self: center;
+}
+
+.trash {
+  align-self: center;
+  font-size: 1rem;
+  display: none;
+}
+
+.trash:hover {
+  color: red;
+  cursor: pointer;
 }
 
 .todo-footer {
   background-color: var(--main-bg);
   text-align: center;
+  padding: var(--list-pad);
 }
 
 .todo-footer a {

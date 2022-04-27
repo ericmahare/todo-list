@@ -1,6 +1,10 @@
 import './main.css';
-import addData from './modules/Ui.js';
+import Rud from './modules/rud.js';
 
-// get DOM elements
-const todoContainer = document.querySelector('.lists');
-todoContainer.innerHTML = addData();
+// load data to the document
+document.addEventListener('DOMContentLoaded', () => {
+  Rud.read();
+  Rud.update();
+  Rud.addTodos();
+  Rud.delete();
+});
