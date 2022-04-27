@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Square+Peg&display=swap');
+
+:root {
+  --border: 1px #d6d5d5 solid;
+  --main-bg: #f8f8f8;
+  --bg-color: #d6d5d5;
+  --list-pad: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-section {
+  width: 40vw;
+  min-height: 25rem;
+}
+
+.todo-container {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 10px 10px 8px;
+  box-shadow: 0 5px 5px 5px var(--bg-color);
+}
+
+.todos {
+  list-style-type: none;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-title,
+.todo-input {
+  padding: 15px;
+  border-top: var(--border);
+}
+
+.input {
+  width: 92%;
+  padding: var(--list-pad);
+  border: 0;
+  outline: 0;
+  font-style: italic;
+  font-size: 20px;
+}
+
+::placeholder {
+  font-size: 20px;
+  color: #d6d5d5;
+}
+
+.check {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.todo-input {
+  padding: 0;
+  border-bottom: var(--border);
+}
+
+.todo-value {
+  border-bottom: var(--border);
+  border-top: 0;
+  padding: var(--list-pad);
+}
+
+.return {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--bg-color);
+}
+
+.move {
+  cursor: move;
+  color: var(--bg-color);
+}
+
+.todo-footer {
+  background-color: var(--main-bg);
+  text-align: center;
+}
+
+.todo-footer a {
+  text-decoration: none;
+  color: rgb(154, 154, 154);
+}
+
+.todo-footer a:hover {
+  text-decoration: underline;
+}
