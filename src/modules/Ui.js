@@ -1,13 +1,19 @@
-import todos from './todoList.js';
+import todosData from './todoList.js';
 
 const addData = () => {
   let result = '';
-  todos.forEach((todo) => {
-    const { description } = todo;
+  todosData.forEach((todo) => {
+    const { description, index } = todo;
     const data = `
-      <li class="todo-value flex">
-        <span><input type="checkbox" class="check">${description}</span>
-        <span class="move"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+      <li class="single-todo" data-set=${index}>
+        <span class="todo-value">
+          <input type="checkbox" class="check">
+         <form class="upt-form" data-set=${index}> 
+            <input type="text" class="input list-input" value="${description}" data-set=${index}>
+          </form>
+        </span>
+          <span class="move" data-set=${index}><i class="fa-solid fa-ellipsis-vertical"></i></span>
+          <span class="trash" data-set=${index}><i class="fa-solid fa-trash del"></i></span>
       </li>
     `;
     result += data;
