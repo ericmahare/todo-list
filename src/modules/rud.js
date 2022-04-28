@@ -1,3 +1,4 @@
+import Interactive from './interactive.js';
 import todosData from './todoList.js';
 import addData from './Ui.js';
 // get dom elements
@@ -10,14 +11,14 @@ let todos = todosData;
 const upDateFunc = (todos) => {
   let result = '';
   todos.forEach((todo) => {
-    const { description, index } = todo;
+    const { description, index, completed } = todo;
     const data = `
       <li class="single-todo" data-set=${index}>
         <span class="todo-value">
-          <input type="checkbox" class="check">
-          <form class="upt-form" data-set=${index}> 
-            <input type="text" class="input list-input" value="${description}" data-set=${index}>
-          </form>
+        <input type="checkbox" class="check" data-set=${index} ${completed ? 'checked' : ''}>
+        <form class="upt-form" data-set=${index}> 
+           <input type="text" class="input list-input ${completed ? 'checked' : ''}" value="${description}" data-set=${index}>
+         </form>
         </span>
           <span class="move" data-set=${index}><i class="fa-solid fa-ellipsis-vertical"></i></span>
           <span class="trash" data-set=${index}><i class="fa-solid fa-trash del"></i></span>
@@ -134,6 +135,17 @@ class Rud {
       }
     });
   };
+
+  static toggleComplete = () => {
+    const interactive = new Interactive(todos);
+    interactive.toggleComplete();
+  }
+
+  static clearCompleted = () => {
+    // get the clear function
+    const clear = new Interactive(todos);
+    clear.clearComplete();
+  }
 }
 
 export default Rud;
