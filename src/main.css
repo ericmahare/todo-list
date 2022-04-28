@@ -144,3 +144,9 @@ body {
 .todo-footer a:hover {
   text-decoration: underline;
 }
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-style: solid;
+  text-decoration-thickness: 3px;
+}
