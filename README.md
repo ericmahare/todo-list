@@ -11,6 +11,10 @@
 - JavaScript
 - webpack
 
+## Live Link
+
+[view live demo](https://ericmahare.github.io/todo-list/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
